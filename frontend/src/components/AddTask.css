@@ -1,0 +1,15 @@
+.add-button {
+    background-color: #cdcdcd !important;
+    margin: 4px !important;
+    justify-content: center;
+    border-radius: 4px !important;
+}
+
+.add-icon {
+    min-width: 30px !important;
+    width: 30px !important;
+}
+
+.dialog-grid-container {
+    padding: 10px 40px 25px 40px;
+}

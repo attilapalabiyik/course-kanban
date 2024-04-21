@@ -1,0 +1,75 @@
+.task {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 4px;
+    border-radius: 4px;
+    transition: max-height 0.6s ease-out, opacity 0.5s ease;
+    overflow: hidden;
+}
+
+.task-text {
+    padding: 8px;
+}
+
+.task-extra {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.sub-tasks-button {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.time-remaining {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { 
+        opacity: 1; 
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-10px);
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateX(-30px);
+        height: 0; 
+        padding: 0; 
+        margin: 0; 
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-30px);
+        height: 0; 
+        padding: 0; 
+        margin: 0; 
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(-10px);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateX(0);
+    }
+}
