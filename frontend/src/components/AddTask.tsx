@@ -76,12 +76,12 @@ const AddTaskDialog = (props: DialogProps) => {
                     </LocalizationProvider>
                 </Grid>
                 <Grid item xs={6}></Grid>
-                <Grid item xs={3} marginTop={"32px"}>
+                <Grid item xs={3} marginTop={"16px"}>
                     <Button variant="outlined" fullWidth onClick={() => setOpen(false)}>
                         Cancel
                     </Button>
                 </Grid>
-                <Grid item xs={3} marginTop={"18px"}>
+                <Grid item xs={3} marginTop={"16px"}>
                     <Button 
                         variant="contained" 
                         fullWidth 

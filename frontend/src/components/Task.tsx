@@ -5,6 +5,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { timeRemaining } from '../models/dataModel.ts';
 import "./Task.css"
 import TaskDescription from './TaskDescription.tsx';
@@ -147,15 +148,18 @@ const Task = ({ task, columnId, index, deleteTask }) => {
                         <ExpandLessIcon style={{ transform: rotate, transition: "all 0.2s linear" }}/>
                       </IconButton>
                       <TaskDescription task={task}/>
+                      <IconButton onClick={() => {}}>
+                        <ContentCopyIcon />
+                      </IconButton>
                       <IconButton onClick={() => deleteTask(task.id)}>
                         <DeleteOutlineIcon />
                       </IconButton>
                     </div>
                     <div className='time-remaining'>
-                        <Typography variant='body2' color={"grey"}>
+                        <Typography fontSize={12} color={"grey"}>
                             {remaining}
                         </Typography>
-                        <div style={{width: "8px"}}></div>
+                        <div style={{width: "4px"}}></div>
                     </div>
                   </div>
                   <Collapse in={open}>

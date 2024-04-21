@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Board from "./components/Board.tsx";
 import {Data, TaskObj} from "./models/dataModel.ts"
+import ControlBar from './components/ControlBar.tsx';
+import Activities from './components/Activities.tsx'
+import './App.css'
 
 const initialData: Data = {
   columns: [
@@ -26,13 +29,13 @@ const initialData: Data = {
   tasks: {
     'task-1': {
       id: 'task-1',
-      name: 'PLACEHOLDER TASK',
+      name: 'Homework 1',
       description: 'This is a placeholder task',
       course_name: 'CS 101',
       priority: 'High',
       due_date: '04/30/2024',
       time_due: '11:59 PM',
-      time_remaining: '9 days left',
+      time_remaining: 'in 9 days',
       subTasks: [
         {id: "1", text: "do this"},
         {id: "2", text: "do that"},
@@ -66,8 +69,14 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1 style={{textAlign: "center"}}>Course Kanban</h1>
-      <Board data={data} setData={setData} addTask={addTask} deleteTask={deleteTask}/>
+      <h1>Course Kanban</h1>
+      <div className='app-content'>
+        <div>
+          <ControlBar data={data} setData={setData}/>
+          <Board data={data} setData={setData} addTask={addTask} deleteTask={deleteTask}/>
+        </div>
+        <Activities />
+      </div>
     </div>
   );
 };
