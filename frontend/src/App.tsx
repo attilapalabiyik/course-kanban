@@ -29,14 +29,14 @@ const initialData: Data = {
       name: 'PLACEHOLDER TASK',
       description: 'This is a placeholder task',
       course_name: 'CS 101',
-      priority: 'low',
+      priority: 'High',
       due_date: '04/30/2024',
       time_due: '11:59 PM',
-      time_remaining: '10 days left',
+      time_remaining: '9 days left',
       subTasks: [
-        "do this",
-        "do that",
-        "and that"
+        {id: "1", text: "do this"},
+        {id: "2", text: "do that"},
+        {id: "3", text: "and that"}
       ]
     },
   },

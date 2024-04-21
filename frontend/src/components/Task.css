@@ -8,8 +8,15 @@
     overflow: hidden;
 }
 
-.task-text {
+.task-body {
+    display: flex;
+    justify-content: space-between;
     padding: 8px;
+}
+
+.task-tags {
+    width: 20px;
+    height: 40px;
 }
 
 .task-extra {

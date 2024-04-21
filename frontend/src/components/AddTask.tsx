@@ -81,7 +81,7 @@ const AddTaskDialog = (props: DialogProps) => {
                         Cancel
                     </Button>
                 </Grid>
-                <Grid item xs={3} marginTop={"32px"}>
+                <Grid item xs={3} marginTop={"18px"}>
                     <Button 
                         variant="contained" 
                         fullWidth 

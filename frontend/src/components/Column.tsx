@@ -16,7 +16,7 @@ const Column = ({ column, tasks, addTask, deleteTask }) => {
           <div {...provided.droppableProps} ref={provided.innerRef} className={`droppable-area`}>
             {Object.keys(tasks).length 
               ? tasks.map((task, index) => (
-                <Task key={task.id} task={task} index={index} />
+                <Task key={task.id} task={task} columnId={column.id} index={index} deleteTask={deleteTask} />
               ))
               : null
             }
