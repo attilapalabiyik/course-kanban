@@ -1,8 +1,21 @@
 .app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  width: fit-content;
+  height: fit-content;
 }
 
 .app-content {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .app-content {
+      align-items: center;
+      flex-direction: column;
+  }
 }
