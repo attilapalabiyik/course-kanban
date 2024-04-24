@@ -2,6 +2,7 @@ import * as React from 'react';
 import { DataGrid, GridColDef, GridRowsProp, GridSlots } from '@mui/x-data-grid';
 import { Button } from '@mui/material';
 import { useState } from 'react';
+import "./Activities.css"
 
 const AddActivity = ({handleAddActivity}) => {
     return (
@@ -26,7 +27,7 @@ export default function BasicRowEditingGrid() {
   };
 
   return (
-    <div style={{ height: 628, width: 640 }}>
+    <div className='data-grid'>
       <DataGrid 
         editMode="row" 
         rows={rows} 

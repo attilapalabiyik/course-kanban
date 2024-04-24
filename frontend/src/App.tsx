@@ -4,6 +4,7 @@ import {Data, TaskObj} from "./models/dataModel.ts"
 import ControlBar from './components/ControlBar.tsx';
 import Activities from './components/Activities.tsx'
 import './App.css'
+import ContentToggle from './components/ContentToggle.tsx';
 
 const initialData: Data = {
   columns: [
@@ -47,6 +48,7 @@ const initialData: Data = {
 
 const App = () => {
   const [data, setData] = useState<Data>(initialData);
+  const [content, setContent] = useState('kanban');
 
   const addTask = (newTask: TaskObj) => {
     const newTasks = {...data.tasks, [newTask.id]: newTask};
@@ -69,14 +71,15 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Course Kanban</h1>
-      <div className='app-content'>
-        <div>
-          <ControlBar data={data} setData={setData}/>
-          <Board data={data} setData={setData} addTask={addTask} deleteTask={deleteTask}/>
-        </div>
-        <Activities />
+      <h1 className='title'>Course Kanban</h1>
+      <ContentToggle content={content} setContent={setContent}/>
+      {content === "kanban" 
+      ? <div>
+        <ControlBar data={data} setData={setData}/>
+        <Board data={data} setData={setData} addTask={addTask} deleteTask={deleteTask}/>
       </div>
+      : <Activities />
+      }
     </div>
   );
 };
